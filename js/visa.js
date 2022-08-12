@@ -12,11 +12,28 @@ document.forms[0].onsubmit = function (e) {
 
   let holderName = document.querySelector(".holder-name");
 
-  if (nameInput.value === "") {
+  function isOnlyCharacters() {
+    let validation = true;
+    for (let i = 0; i < nameInput.value.length; i++) {
+      if (nameInput.value[i] != " ") {
+        if (
+          nameInput.value[i].toLowerCase() === nameInput.value[i].toUpperCase()
+        ) {
+          validation = false;
+          break;
+        }
+      }
+    }
+    return validation;
+  }
+
+  if (nameInput.value === "" || nameInput.value === " ") {
+    //Check is Empty
     nameErrMsg.style.removeProperty("display");
     nameInput.style.borderColor = "hsl(0, 100%, 66%)";
     nameBlankErrMsg.style.display = "block";
-  } else if (Number.isNaN(+nameInput.value)) {
+  } else if (isOnlyCharacters()) {
+    //Check is only characters(names)
     nameBlankErrMsg.style.removeProperty("display");
     nameErrMsg.style.removeProperty("display");
     nameInput.style.removeProperty("border-color");
@@ -44,7 +61,8 @@ document.forms[0].onsubmit = function (e) {
   let numCard3 = document.querySelector(".num-card-3");
   let numCard4 = document.querySelector(".num-card-4");
 
-  if (numInput.value === "") {
+  if (numInput.value === "" || numInput.value === " ") {
+    //Check is Empty
     numErrMsg.style.removeProperty("display");
     numInput.style.borderColor = "hsl(0, 100%, 66%)";
     numBlankErrMsg.style.display = "block";
@@ -118,6 +136,7 @@ document.forms[0].onsubmit = function (e) {
   if (dateInputs[0].value === "" || dateInputs[1].value === "") {
     //Check Empty
     if (dateInputs[0].value === "" && !(dateInputs[1].value === "")) {
+      //For month
       monthErrMsg.style.removeProperty("display");
       yearErrMsg.style.removeProperty("display");
       dateInputs[1].style.removeProperty("border-color");
@@ -127,6 +146,7 @@ document.forms[0].onsubmit = function (e) {
       //put the year of EXP date that entered to the card
       year.innerHTML = dateInputs[1].value;
     } else if (!(dateInputs[0].value === "") && dateInputs[1].value === "") {
+      //For year
       monthErrMsg.style.removeProperty("display");
       yearErrMsg.style.removeProperty("display");
       dateInputs[0].style.removeProperty("border-color");
@@ -138,6 +158,7 @@ document.forms[0].onsubmit = function (e) {
         month.innerHTML = "0" + dateInputs[0].value;
       else month.innerHTML = dateInputs[0].value;
     } else {
+      //If month and year are empty
       monthErrMsg.style.removeProperty("display");
       yearErrMsg.style.removeProperty("display");
       monthAndYearErrMsg.style.removeProperty("display");
@@ -224,7 +245,8 @@ document.forms[0].onsubmit = function (e) {
 
   let cvc = document.querySelector(".cvc");
 
-  if (cvcInput.value === "") {
+  if (cvcInput.value === "" || cvcInput.value === " ") {
+    //Check is Empty
     cvcErrMsg.style.removeProperty("display");
     cvcBlankErrMsg.style.display = "block";
     cvcInput.style.borderColor = "hsl(0, 100%, 66%)";
@@ -245,21 +267,21 @@ document.forms[0].onsubmit = function (e) {
   }
 
   if (!(nameValid && numValid && dateValid && cvcValid)) {
+    //Confirm the updates
     e.preventDefault();
-    // console.log("1: " + nameValid + " 2: " + numValid);
   } else {
     e.preventDefault();
-    let content = document.querySelector(".content");
-    content.style.width = "0";
-    content.style.height = "0";
-    content.remove();
-    let completeState = document.querySelector(".complete");
-    completeState.style.display = "block";
-    console.log("hi");
+    setTimeout(() => {
+      let content = document.querySelector(".content");
+      content.remove();
+      let completeState = document.querySelector(".complete");
+      completeState.style.display = "block";
+    }, 500);
   }
 };
 
 let continueBtn = document.querySelector(".cont");
 continueBtn.addEventListener("click", function () {
+  //Go Back to the form state
   location.reload();
 });
