@@ -16,4 +16,4 @@ Users should be able to:
 - If there are no errors, display the completed state
 - Reset the form when the user clicks "Continue" on the completed state
 
-<h3>This template is not Responsive</h3>
+<h3>NOTE: This template is not Responsive</h3>
