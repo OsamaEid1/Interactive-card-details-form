@@ -1,0 +1,248 @@
+/* Start Variables */
+:root {
+    --linear-gradient: linear-gradient(hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+    --err-input: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark--violet: hsl(278, 68%, 11%);
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
+}
+
+/* Small */
+@media (min-width: 375px) {
+    .container {
+        width: 350px;
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1440px;
+        flex-direction: row;
+    }
+}
+
+/* End Global Rules */
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+/* Start Side  */
+.side{
+    flex-basis: 30%;
+    background-image: url(../images/bg-main-desktop.png);
+    color: white;
+}
+.side .card-front{
+    position: relative;
+    top: 20%;
+    right: -30%;
+}
+.side .card-front svg{
+    position: absolute;
+    top: 10%;
+    left: 6%;
+}
+.side .card-front .num-card{
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align:center;
+}
+.side .card-front .holder-name{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+}
+.side .card-front .exp-date{
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+}
+.side .card-back{
+    position: relative;
+    top: 25%;
+    right: -60%;
+}
+.side .card-back p{
+    position: absolute;
+    top: 45%;
+    right: 16%;
+}
+/* End Side  */
+
+/* Start Content */
+.content{
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    flex-basis: 42%;
+    margin-top: 100px;
+}
+form label{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+}
+form input{
+    margin: 5px 0 20px;
+    padding-left: 15px;
+    border-radius: 6px;
+    height: 45px;
+    border-color: #a2a2ac38;
+    transition: 0.3s;
+    color: hsl(278, 94%, 30%);
+}
+form input[name = "name"],
+form input[name = "num"]{
+    width: 100%;
+}
+.foot{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.foot .date{
+    width: 50%;
+    /* justify-content: space-between; */
+}
+form input[name="mm"],
+form input[name="yy"]{
+    width: 45%;
+}
+form input[name="yy"]{
+    margin-left: 5px;
+}
+.foot .cvc{
+    width: 47%;
+    position: relative;
+}
+form input[name="cvc"]{
+    max-width: 100%;
+    margin-top: 25px;
+}
+form label[for="cvc"]{
+    position: absolute;
+    bottom: 75%;
+    left: 0%;
+}
+button{
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 6px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+    cursor: pointer;
+}
+form input::placeholder{
+    /* padding-left: px; */
+    color: hsla(280, 1%, 52%, 0.33);
+}
+/* End Content  */
+
+/* Start Active Mode */
+form input:focus{
+    outline: none;
+    padding-left: 10px;
+    border-color: hsl(249, 99%, 64%);
+    color:hsl(278, 94%, 30%);
+}
+form p{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: -10px;
+    color: var(--err-input);
+    display: none;
+    position: absolute;
+}
+/* End Active Mode */
+
+/* Start Complete Section */
+.complete{
+    flex-direction: column;
+    height: 36%;
+    margin: 286px auto;
+    display: none;
+    text-align: center;
+    flex-basis: 25%;
+}
+.complete h3{
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.complete p{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--Dark-grayish-violet);
+    margin: 20px 0 40px;
+}
+.complete button{
+    padding: 13px 0;
+}
+/* End Complete Section */

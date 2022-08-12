@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Interactive card details form</title>
+
+
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+        }
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/visa.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Side Section -->
+        <div class="side">
+            <div class="card-front">
+                <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+                    <path
+                        d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                        stroke="#fff" />
+                </svg>
+                <img src="images/bg-card-front.png" alt="">
+                <!-- <div class="info"> -->
+                    <p class="num-card"><span class="num-card-1">0000</span> <span class="num-card-2">0000</span> <span class="num-card-3">0000</span> <span class="num-card-4">0000</span></p>
+                    <p class="holder-name">Jane Appleseed</p>
+                    <span class="exp-date"><span class="month">00</span>/<span class="year">00</span></span>
+                <!-- </div> -->
+            </div>
+            <div class="card-back">
+                <p class="cvc">000</p>
+                <img src="images/bg-card-back.png" alt="">
+            </div>
+        </div>
+        <!-- End Side Section -->
+        <!-- Start Content  -->
+        <div class="content">
+            <form>
+                <div class="name">
+                    <label for="name">cardholder name</label><br>
+                    <input type="text" name="name" id="name" placeholder="e.g. Jan Appleseed">
+                    <p class="nameErrMsg">Wrong name, enter a valid name</p>
+                    <p class="nameBlankErrMsg">Can't be blank</p>
+                </div>
+
+                <br> 
+
+                <div class="num">
+                    <label for="num">card number</label><br>
+                    <input type="text" name="num" id="num" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+                    <p class="numErrMsg">Wrong format, numbers only</p>
+                    <p class="numBlankErrMsg">Can't be blank</p>
+                </div>
+
+                <br> 
+                
+                <div class="foot">
+                    <div class="date">
+                        <label for="date">exp. date (mm/yy)</label><br>
+                        <input type="text" name="mm" id="date" placeholder="MM" maxlength="2">
+                        <p class="monthErrMsg">Wrong Month</p>
+                        <input type="text" name="yy" id="date" placeholder="YY" minlength="2" maxlength="2">
+                        <p class="yearErrMsg">Wrong Year</p>
+                        <p class="monthAndYearErrMsg">Wrong Month & Year</p>
+                        <p class="dateBlankErrMsg">Can't be blank</p>
+                    </div>
+                    <div class="cvc">
+                        <label for="cvc">cvc</label>
+                        <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" minlength="3" maxlength="3">
+                        <p class="cvcBlankErrMsg">Can't be blank</p>
+                        <p class="cvcErrMsg">Wrong format, numbers only</p>
+                        <br>
+                    </div>
+                </div>
+
+                <br>
+
+                <button type="submit">Confirm</button>
+            </form>
+        </div>
+        <!-- End Content  -->
+        <!-- Start Complete  -->
+        <div class="complete content">
+            <img src="images/icon-complete.svg" alt="">
+            <h3>Thank you!</h3>
+            <p>We've added your card details</p>
+            <button type="submit" class="cont">Continue</button>
+        </div>
+        <!-- End Complete  -->
+        <!-- <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="mailto: osamaeid0101@gmail.com">Osama Eid</a>.
+        </div> -->
+    </div>
+
+<script src="js/visa.js"></script>
+</body>
+</html>
