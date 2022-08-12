@@ -40,22 +40,12 @@ a {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    transition: 0.3s;
 }
 
 /* Small */
-@media (min-width: 375px) {
-    .container {
-        width: 350px;
-        flex-direction: column;
-        height: 100vh;
-    }
-}
 @media (min-width: 768px) {
     .container {
         width: 750px;
-        flex-direction: column;
-        height: 100vh;
     }
 }
 
@@ -63,8 +53,6 @@ a {
 @media (min-width: 992px) {
     .container {
         width: 970px;
-        flex-direction: column;
-        height: 100vh;
     }
 }
 
@@ -72,7 +60,6 @@ a {
 @media (min-width: 1200px) {
     .container {
         width: 1440px;
-        flex-direction: row;
     }
 }
 
@@ -93,6 +80,26 @@ a {
     position: relative;
     top: 20%;
     right: -30%;
+}
+@media (max-width: 767px) {
+    .side .card-front{
+        right: -0%;
+    }
+}
+@media (min-width: 768px) {
+    .side .card-front{
+        right: -0%;
+    }
+}
+@media (min-width: 992px) {
+    .side .card-front{
+        right: -9%;
+    }
+}
+@media (min-width: 1199px) {
+    .side .card-front{
+        right: -15%;
+    }
 }
 .side .card-front svg{
     position: absolute;
@@ -125,6 +132,28 @@ a {
     top: 25%;
     right: -60%;
 }
+@media (max-width: 767px) {
+    .side .card-back {
+        right: -0%;
+    }
+}
+@media (min-width: 768px) {
+    .side .card-back {
+        right: -0%;
+    }
+}
+
+@media (min-width: 992px) {
+    .side .card-back {
+        right: -15%;
+    }
+}
+
+@media (min-width: 1199px) {
+    .side .card-back {
+        right: -22%;
+    }
+}
 .side .card-back p{
     position: absolute;
     top: 45%;
@@ -138,6 +167,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 form{
     flex-basis: 42%;
