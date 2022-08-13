@@ -41,28 +41,6 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
-
-/* Small */
-@media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
-}
-
-/* Medium */
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-}
-
-/* Large */
-@media (min-width: 1200px) {
-    .container {
-        width: 1440px;
-    }
-}
-
 /* End Global Rules */
 
 .container{
@@ -134,24 +112,28 @@ a {
 }
 @media (max-width: 767px) {
     .side .card-back {
-        right: -0%;
+        right: 0%;
+        top: 22%;
     }
 }
 @media (min-width: 768px) {
     .side .card-back {
-        right: -0%;
+        right: 0%;
+        top: 22%;
     }
 }
 
 @media (min-width: 992px) {
     .side .card-back {
         right: -15%;
+        top: 22%;
     }
 }
 
 @media (min-width: 1199px) {
     .side .card-back {
-        right: -22%;
+        right: -30%;
+        top: 25%;
     }
 }
 .side .card-back p{
