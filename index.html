@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Mentor | Interactive card details form</title>
-
-
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
         .attribution {
             font-size: 11px;
@@ -22,30 +18,34 @@
         }
     </style>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" href="css/visa.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container">  
         <!-- Start Side Section -->
         <div class="side">
-            <div class="card-front">
-                <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
-                    <path
-                        d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
-                        stroke="#fff" />
-                </svg>
-                <img src="images/bg-card-front.png" alt="">
-                <!-- <div class="info"> -->
-                    <p class="num-card"><span class="num-card-1">0000</span> <span class="num-card-2">0000</span> <span class="num-card-3">0000</span> <span class="num-card-4">0000</span></p>
-                    <p class="holder-name">Jane Appleseed</p>
-                    <span class="exp-date"><span class="month">00</span>/<span class="year">00</span></span>
-                <!-- </div> -->
-            </div>
-            <div class="card-back">
-                <p class="cvc">000</p>
-                <img src="images/bg-card-back.png" alt="">
+            <div class="content">
+                <div class="front-card">
+                    <div class="card-content">
+                        <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+                            <path
+                                d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                                stroke="#fff" />
+                        </svg>
+                        <img src="images/bg-card-front.png" alt="">
+                            <p class="num-card"><span class="num-card-1">0000</span> <span class="num-card-2">0000</span> <span class="num-card-3">0000</span> <span class="num-card-4">0000</span></p>
+                            <p class="holder-name">Jane Appleseed</p>
+                            <span class="exp-date"><span class="month">00</span>/<span class="year">00</span></span>
+                    </div>
+                </div>
+                <div class="back-card">
+                    <div class="card-content">
+                        <p class="cvc">000</p>
+                        <img src="images/bg-card-back.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
         <!-- End Side Section -->
@@ -58,18 +58,14 @@
                     <p class="nameErrMsg">Wrong name, enter a valid name</p>
                     <p class="nameBlankErrMsg">Can't be blank</p>
                 </div>
-
                 <br> 
-
                 <div class="num">
                     <label for="num">card number</label><br>
                     <input type="text" name="num" id="num" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
                     <p class="numErrMsg">Wrong format, numbers only</p>
                     <p class="numBlankErrMsg">Can't be blank</p>
                 </div>
-
                 <br> 
-                
                 <div class="foot">
                     <div class="date">
                         <label for="date">exp. date (mm/yy)</label><br>
@@ -88,27 +84,16 @@
                         <br>
                     </div>
                 </div>
-
                 <br>
-
                 <button type="submit">Confirm</button>
             </form>
         </div>
         <!-- End Content  -->
-        <!-- Start Complete  -->
-        <div class="complete content">
-            <img src="images/icon-complete.svg" alt="">
-            <h3>Thank you!</h3>
-            <p>We've added your card details</p>
-            <button type="submit" class="cont">Continue</button>
-        </div>
-        <!-- End Complete  -->
         <!-- <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="mailto: osamaeid0101@gmail.com">Osama Eid</a>.
         </div> -->
-    </div>
-
-<script src="js/visa.js"></script>
+    <!-- </div> -->
+    <script src="js/main.js"></script>
 </body>
 </html>
