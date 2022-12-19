@@ -229,6 +229,7 @@ document.forms[0].onsubmit = function (e) {
  } else {
   cvcBlankErrMsg.style.removeProperty("display");
   cvcErrMsg.style.removeProperty("display");
+  cvcInput.style.removeProperty("border-color");
   cvcValid = true;
 
   //put the cvc that entered to the card
