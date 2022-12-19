@@ -166,6 +166,11 @@ body {
 /* End Side  */
 
 /* Start Content */
+.container > .content{
+   flex-basis: 70%;
+    width: 100%;
+    position: relative;
+}
 @media (min-width: 992px) {
     .container > .content{
         max-width: 350px;
@@ -181,24 +186,13 @@ body {
     }
 }
 form{
-    margin-top: 65px;
+    margin-top: 50px;
     margin-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-/* @media (min-width: 420px) {
-    form{
-        margin-bottom: -100px;
-    }
-}
-@media (min-width: 768px) {
-    form{
-        margin-bottom: -200px;
-    }
-}
-@media (min-width: 992px) {
-    form{
-        margin: 0;
-    }
-} */
 form label{
     text-transform: uppercase;
     font-size: 13px;
