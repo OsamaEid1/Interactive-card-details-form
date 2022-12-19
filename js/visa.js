@@ -256,7 +256,7 @@ document.forms[0].onsubmit = function (e) {
    let btnText = document.createTextNode("Continue");
 
    div.className = "complete";
-   img.src = "../images/icon-complete.svg";
+   img.src = "images/icon-complete.svg";
    btn.className = "cont";
    btn.type = "submit";
 
