@@ -192,6 +192,7 @@ form{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: calc(100% - 60px);
 }
 form label{
     text-transform: uppercase;
